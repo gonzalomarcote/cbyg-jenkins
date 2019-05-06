@@ -14,7 +14,7 @@ $ git push
 
 Add and update repo:
 ```
-$ helm repo add phono-helm https://f7ae180df1afa865522a24b34fa4c16704e3b7cf@raw.githubusercontent.com/gonzalomarcote/phono-helm/master/
+$ helm repo add phono-helm https://github-oauth@raw.githubusercontent.com/gonzalomarcote/phono-helm/master/
 $ helm repo update
 $ helm search jenkins
 ```
