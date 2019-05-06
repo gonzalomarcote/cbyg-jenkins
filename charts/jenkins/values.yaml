@@ -6,7 +6,8 @@ service:
   name: jenkins-service
   type: LoadBalancer
   externalPort: 8080
-  internalPort: 8080
+  internalPortHttp: 8080
+  internalPortJnlp: 50000
 volume:
   name: jenkins-home
   mountPath: /var/jenkins_home

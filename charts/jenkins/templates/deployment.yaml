@@ -37,7 +37,10 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
-        - containerPort: {{ .Values.service.internalPort }}
+        - name: http-port
+          containerPort: {{ .Values.service.internalPortHttp }}
+        - name: jnlp-port
+          containerPort: {{ .Values.service.internalPortJnlp }}
         volumeMounts:
         - name: {{ .Values.volume.name }}
           mountPath: {{ .Values.volume.mountPath | quote }}

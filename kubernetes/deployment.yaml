@@ -35,7 +35,10 @@ spec:
         image: gcr.io/phono-ai/jenkins:latest
         imagePullPolicy: "Always"
         ports:
-        - containerPort: 8080
+        - name: http-port
+          containerPort: 8080
+        - name: jnlp-port
+          containerPort: 50000
         volumeMounts:
         - name: jenkins-home
           mountPath: "/var/jenkins_home"

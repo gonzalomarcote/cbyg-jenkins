@@ -22,6 +22,6 @@ $ helm search jenkins
 Install example:
 ```
 $ helm install --dry-run --debug --name jenkins --namespace jenkins phono-helm/jenkins
-$ helm install --name jenkins --namespace jenkins phono-helm/jenkins
+$ helm upgrade --install --namespace jenkins jenkins phono-helm/jenkins
 
 ```
