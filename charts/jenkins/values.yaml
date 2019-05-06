@@ -21,4 +21,6 @@ image:
   repository: gcr.io/phono-ai/jenkins
   tag: latest
   pullPolicy: Always
+javaOpts:
+  value: "-Dhudson.slaves.NodeProvisioner.initialDelay=0 -Dhudson.slaves.NodeProvisioner.MARGIN=50 -Dhudson.slaves.NodeProvisioner.MARGIN0=0.85"
 resources: {}

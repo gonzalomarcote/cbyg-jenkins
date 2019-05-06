@@ -41,6 +41,9 @@ spec:
           containerPort: {{ .Values.service.internalPortHttp }}
         - name: jnlp-port
           containerPort: {{ .Values.service.internalPortJnlp }}
+        env:
+        - name: JAVA_OPTS
+          value: {{ .Values.javaOpts.value }}
         volumeMounts:
         - name: {{ .Values.volume.name }}
           mountPath: {{ .Values.volume.mountPath | quote }}
