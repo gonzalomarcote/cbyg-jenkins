@@ -1,0 +1,23 @@
+# Default values for backend.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+service:
+  name: jenkins-service
+  type: LoadBalancer
+  externalPort: 8080
+  internalPort: 8080
+volume:
+  name: jenkins-home
+  mountPath: /var/jenkins_home
+  claimName: jenkins-claim
+  storage: 30Gi
+  class: standard
+deployment:
+  name: jenkins-deployment
+  app: jenkins
+image:
+  repository: gcr.io/phono-ai/jenkins
+  tag: latest
+  pullPolicy: Always
+resources: {}
